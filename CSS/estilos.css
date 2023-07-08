@@ -218,7 +218,6 @@ main {
 
   .header {
     background-color: black;
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between; /* Alinea el logo y el menú a los extremos */
