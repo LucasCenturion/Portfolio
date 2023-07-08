@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Consolas", monospace;
+  background-color: black;
+}
+
+/* Logo de Animacion */
+.logo {
+  position: relative;
+  color: rgb(0, 210, 0);
+  margin-left: 40px;
+}
+
+.logo span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: black;
+  border-left: 1px solid rgb(0, 210, 0);
+  animation: escribir 5s steps(30) infinite alternate;
+}
+
+@keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+/* FIN Logo de Animacion */
+
+.header {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  height: 50px;
+  top: 0;
+}
+
+.footer {
+  background-color: black;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  bottom: 0;
+  position: fixed;
+  color: green;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(0, 210, 0);
+}
+
+a {
+  color: rgb(0, 210, 0);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  width: max-content;
+  align-items: center;
+}
+
+.nav-menu-link:hover {
+  background-color: rgba(0, 210, 0, 0.429);
+  color: black;
+  transition: 0.5s;
+}
+
+.nav-menu-link {
+  border-radius: 3px;
+}
+
+.comando {
+  width: 30px;
+}
+
+.toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 60px;
+  padding: 0 20px;
+  display: none;
+}
+
+.maquina {
+  position: relative;
+  float: left;
+  background: tomato;
+  color: #fff;
+  font-size: 1.2em; /* Tamaño de fuente ajustado para que el texto se ajuste al contenedor */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.maquina span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: tomato;
+  border-left: 1px solid #000;
+  animation: escribir 30s steps(30) infinite alternate; /* Aumentar la duración del efecto */
+}
+
+@keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.bodySobreMi {
+  background-color: #000;
+}
+
+.bodySobreMi main {
+  height: 100%;
+  background-color: aquamarine;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+.presentacion {
+  color: green;
+  background-color: #081e038d;
+  width: 80vh;
+  max-height: calc(100vh - 120px); /* Ajusta el tamaño máximo para evitar desbordamientos */
+  overflow: auto; /* Permite el desplazamiento del contenido si se desborda */
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 15px;
+    color: rgb(0, 210, 0);
+    line-height: 60px;
+  }
+  nav {
+    width: 100%;
+  }
+  body {
+    font-family: "Consolas", monospace;
+  }
+
+  .logo span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: black;
+    border-left: 1px solid rgb(0, 210, 0);
+    animation: escribir 5s steps(30) infinite alternate;
+  }
+
+  @keyframes escribir {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  .header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Alinea el logo y el menú a los extremos */
+    align-items: center; /* Centra verticalmente */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 0 20px; /* Agrega un espacio alrededor del contenido */
+    top: 0;
+  }
+  .nav p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    width: 100%;
+    left: 100%;
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #canvas {
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  }
+
+  .nav-menu-link:focus {
+    background-color: rgba(0, 210, 0, 0.429);
+    color: black;
+    text-decoration: none;
+  }
+  .nav-menu-link {
+    border-radius: 3px;
+  }
+
+  .toggle {
+    display: block;
+  }
+  .nav-menu-visible {
+    top: 0;
+    left: 0;
+    transition: 1.5s;
+    background-color: #000;
+    height: 100vh;
+    align-self: flex-start;
+  }
+}
+
+.nav-menu-link:hover,
+.nav-menu-link.active {
+  background-color: rgba(0, 210, 0, 0.429);
+  color: black;
+ transition: 0.5s;
+}
+
+.nav-menu-link {
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+}
+
+.button {
+  background-color: rgba(0, 210, 0, 0.429);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.button:hover {
+  background-color: rgba(0, 210, 0, 0.7);
+}
+
+.DivContacto {
+  background-color: rgba(0, 0, 0, 0.433);
+  color: green;
+}
+
+.item1 {
+  background-color: red;
+  width: 100%;
+}
+
+.item2 {
+  background-color: rebeccapurple;
+  width: 100%;
+}
+
+.item3 {
+  background-color: green;
+  width: 100%;
+}
+
+.item4 {
+  background-color: blue;
+  width: 100%;
+}
+
+.seccion {
+  height: calc(100vh - 120px); /* Ajusta la altura para evitar desbordamientos */
+  overflow-y: auto; /* Permite el desplazamiento vertical si el contenido se desborda */
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  scroll-behavior: auto;
+}
+
+.vistaPrevia{
+  width: 100%;
+  border-radius: 10%;
+}
+
+article{
+  background-color: black;
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 10%;
+  color: green;
+  height: auto;
+}
+
+article h3{
+  width: 100%;
+  font-size: large;
+  text-align: center;
+}
+
+.col-3 {
+  position: relative;
+}
+
+p#textoP11 {
+  display: none;
+  opacity: 0; /* Agrega una opacidad inicial de 0 */
+  transition: opacity 0.3s ease; /* Agrega una transición suave de 0.3 segundos para la opacidad */
+}
+
+.col-3:hover h3,
+.col-3:hover figure {
+  display: none;
+}
+
+.col-3:hover p#textoP11 {
+  display: block;
+  justify-content: center;
+  align-self: center;
+  margin: 20px;
+  opacity: 1; /* Cambia la opacidad a 1 al hacer hover */
+}
+
+a{
+  text-decoration: none;
+}
