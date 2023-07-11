@@ -177,8 +177,8 @@ main {
 }
 
 .presentacion {
-  color: green;
-  background-color: black;
+  color: rgb(166, 255, 1);
+  background-color: rgba(0, 0, 0, 0.899);
   width: 80vh;
   max-height: calc(100vh - 120px); /* Ajusta el tamaño máximo para evitar desbordamientos */
   overflow: auto; /* Permite el desplazamiento del contenido si se desborda */
